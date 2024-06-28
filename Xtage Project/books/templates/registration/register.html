@@ -1,0 +1,43 @@
+{% extends "books/index.html" %}
+{% load static %}
+
+{% block banner %}
+
+<div class="login-box">
+    <form method="post">
+        {% csrf_token %}
+<span class="banner-text-login">Sign up to get started !</span>
+<div class="input-group flex-nowrap username-field">
+    <span class="input-group-text" id="addon-wrapping">Username</span>
+    {{ form.username }}
+  </div>
+  <div class="input-group flex-nowrap username-field">
+    <span class="input-group-text" id="addon-wrapping">First Name</span>
+    {{ form.first_name }}
+  </div>
+  <div class="input-group flex-nowrap username-field">
+    <span class="input-group-text" id="addon-wrapping">Last Name</span>
+    {{ form.last_name }}
+  </div>
+  <div class="input-group flex-nowrap password-field">
+    <span class="input-group-text" id="addon-wrapping">Password</span>
+    {{ form.password1 }}
+  </div>
+  <div class="input-group flex-nowrap password-field">
+    <span class="input-group-text" id="addon-wrapping">Confirm Password</span>
+    {{ form.password2 }}
+    <!-- <input type="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="addon-wrapping"> -->
+  </div>
+  <div class="input-group flex-nowrap password-field">
+    <span class="input-group-text" id="addon-wrapping">Email</span>
+    {{ form.email }}
+  </div>
+  <input class="btn btn-login-page" id="loginBtn" type="submit" value="Sign Up">
+  <br>
+  <span class="signup-span">Already registered ? <a href="{%url 'login'%}">Login Here</a></span>
+</form>
+</div>
+{% endblock %}
+
+{% block content %}
+{% endblock %}

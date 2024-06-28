@@ -1,0 +1,67 @@
+{% extends "books/index.html" %}
+{%load static%}
+
+{%block banner%}
+
+
+<div class="book-results-banner">
+    <div class="book-details-box">
+        <img src="{{book.volumeInfo.imageLinks.thumbnail}}" alt="" class="book-img">
+        <div class="action-buttons">
+            <button id="recommendBtn" class="btn btn-primary">Recommend</button>
+            <div class="like-section">
+                <div class="heart {% if liked %}liked{% endif %}" data-book-id="{{ book.google_books_id }}"></div>
+    <span class="like-count">{{ likes_count }} likes</span>
+            </div>
+            <button id="bookmarkBtn" class="btn btn-light {% if is_saved %}active{% endif %}">
+                <i class="bi {% if is_saved %}bi-bookmark-fill{% else %}bi-bookmark{% endif %}"></i>
+                <br>
+                <span>{% if is_saved %}Saved!{% else %}Save Book{% endif %}</span>
+            </button>
+            <br>
+        </div>
+        <br>
+        <span class="book-title-head"><strong>{{book.volumeInfo.title}}</strong></span>
+        <span class="book-desc-head"><strong>Description</strong></span>
+        <p class="book-desc">{{book.volumeInfo.description|safe}}</p>
+        <span class="book-author-head"><strong>Author</strong></span>
+        <span class="book-author">{{book_data.volumeInfo.author|default:"Not Available"}}</span>
+        <span class="published-date-head"><strong>Published:</strong></span>
+        <span class="published-date">{{book.volumeInfo.publishedDate|default:"Not Available"}}</span>
+        <br>
+        <span class="published-date-head"><strong>ID:</strong></span>
+        <span class="published-date" id="div-book-ID">{{book_id}}</span>
+    </div>
+    <hr class="comment-separator">
+    <div class="comments-section">
+        <h3>Comments</h3>
+        <!-- Example of a comment, repeat this structure for each comment -->
+        <div class="comment">
+            <p class="comment-text">This is a great book! I really enjoyed reading it.</p>
+            <span class="comment-timestamp">Posted on: 2023-06-27 14:30</span>
+        </div>
+        <!-- Add more comments as needed -->
+    </div>
+    <div class="social-tab">
+        <div class="comment-section">
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Add a comment</label>
+            </div>
+            <button id="commentBtn" class="btn btn-primary">Post Comment</button>
+        </div>
+
+    </div>
+</div>
+
+
+{%endblock%}
+
+{%block content%}
+{%endblock%}
+
+
+{%block jscript%}
+{%static 'js/book_details.js'%}
+
+{%endblock%}

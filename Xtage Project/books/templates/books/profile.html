@@ -1,0 +1,24 @@
+{% extends "books/index.html" %}
+{%load static%}
+
+{%block banner%}
+{%endblock%}
+
+
+
+{%block content%}
+<div class="login-box">
+    <span class="banner-text-login">Hello {{user_details.fname}} !</span>
+    <div class="user-details">
+        <span class="user-detail-labels">Full Name: {{user_details.full_name}}</span>
+        <span class="user-detail-labels">Username: {{user_details.username}}</span>
+        <span class="user-detail-labels">Email: {{user_details.email}}</span>
+    </div>
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <input class="btn btn-login-page" id="logoutBtn" type="submit" value="Logout">
+    </form>
+    
+
+</div>
+{%endblock%}

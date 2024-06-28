@@ -1,0 +1,38 @@
+{% extends "books/index.html" %}
+{%load static%}
+
+
+{%block banner%}
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check-circle-fill" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+      </symbol>
+    </svg>
+    <div class="alert alert-success d-flex align-items-center" role="alert">
+      <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"></use></svg>
+      <div>
+        An example success alert with an icon
+      </div>
+    </div>
+<div class="login-box">
+    <form method="POST" >
+        {% csrf_token %}
+<span class="banner-text-login">Welcome back !</span>
+<div class="input-group flex-nowrap username-field">
+    <span class="input-group-text" id="addon-wrapping">Username</span>
+    {{ form.username }}
+  </div>
+  <div class="input-group flex-nowrap password-field">
+    <span class="input-group-text" id="addon-wrapping">Password</span>
+    {{ form.password }}
+  </div>
+  <input class="btn btn-login-page" id="loginBtn" type="submit" value="Login">
+  <br>
+  <span class="signup-span">Not registered yet ? <a href="{%url 'register'%}">Sign up</a></span>
+</form>
+</div>
+{%endblock%}
+
+
+{%block content%}
+{%endblock%}

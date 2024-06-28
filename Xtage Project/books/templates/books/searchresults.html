@@ -1,0 +1,39 @@
+{% extends "books/index.html" %}
+{%load static%}
+
+{%block banner%}
+<div class="search-results">
+<span class="search-results-disp">Here are your search results</span>
+<span class="search-result-count">Fetched {{book_data.items|length}} results about search query "{{query}}"</span>
+</div>
+{%endblock%}
+
+{%block content%}
+
+{%for books in book_data.items%}
+<div class="search-result-block">
+    <img src="{{books.volumeInfo.imageLinks.thumbnail}}" alt="" class="book-img">
+    <div class="book-details">
+        <span class="book-name">{{books.volumeInfo.title}}</span>
+        <br>
+        <span class="book-publisher"><strong>Publisher</strong> : {{books.volumeInfo.publisher}}</span>
+        <br>
+        <span class="published-date"> <strong>Published date</strong> : {{books.volumeInfo.publishedDate}}</span>
+        <span class="book-description-title">Description</span>
+        <br>
+        {%if books.volumeInfo.description|length == 0 %}
+        <span class="book-description">No description available</span>
+        {%else%}
+        <span class="book-description">{{books.volumeInfo.description|truncatewords:100}}</span>
+        {%endif%}
+        <button class="btn btn-search-bar" id="bookPage" data-book-id={{books.id}} onclick="sendBookId('{{books.id}}')">See More</button>
+
+    </div>
+</div>
+<br>
+{%endfor%}
+{%endblock%}
+
+{%block jscript%}
+{%static 'js/searchresults.js'%}
+{%endblock%}

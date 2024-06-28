@@ -1,0 +1,489 @@
+body{
+ background-color: antiquewhite;
+ font-family: "Raleway";
+ font-weight: 500;
+
+}
+
+
+.nav-top{
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding-inline: 5%;
+  padding-top: 2%;
+}
+
+
+.nav-link-navbar {
+  color: #18272F;
+  position: relative;
+  text-decoration: none;
+  font-weight: bolder;
+  padding-bottom: 0.3%;
+}
+
+.nav-link-navbar::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #18272F;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.nav-link-navbar:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  padding-top: 10%;
+}
+
+.banner-disp-txt {
+  font-weight: bolder;
+  font-size: 5em;
+  padding-left: 3%;
+  line-height: 101%;
+  width: 50%;
+}
+
+.banner-image {
+  width: 45%;
+}
+
+.banner-image img {
+  max-width: 100%;
+  height: auto;
+}
+.search-section{
+  padding-top: 5%;
+  font-size: 2.5em;
+  text-align: center;
+}
+.search-banner{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.search-bar{
+  border-radius: 45px;
+}
+
+.btn-search-bar{
+  color: white;
+  background-color: brown;
+  width: 12%;
+  size: 2em;
+}
+
+.btn-search-bar:hover{
+  background-color: rgb(81, 21, 21);
+  color: white;
+}
+.btn-search-bar:active{
+  background-color: rgb(81, 21, 21) !important;
+  color: white !important;
+}
+
+
+
+.search-dropdown>button{
+  background-color: brown;
+  width: 20%;
+
+}
+
+.search-dropdown>button:hover{
+  background-color: rgb(81, 21, 21);
+}
+.search-dropdown>button:active{
+  background-color: rgb(81, 21, 21) !important;
+  color: white !important;
+
+}
+
+
+.search-dropdown>li{
+  background-color: brown;
+}
+.custom-footer{
+  
+  margin-top: 5%;
+  background-color: black;
+  color: white;
+}
+
+.custom-footer .nav-link{
+  color: white !important;
+}
+
+
+/* footer */
+
+.footer-nav-link {
+  padding-top: 5%;
+  color: white;
+  position: relative;
+  text-decoration: none;
+  font-weight: bolder;
+  padding-bottom: 0.3%;
+  margin-left: 7%;
+
+  
+}
+
+.footer-nav-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.footer-nav-link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.footer-title{
+  color: white !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS for Search page */
+
+
+.banner-disp-txt-search{
+  font-weight: bolder;
+  font-size: 5em;
+  padding-left: 3%;
+  line-height: 101%;
+  width: 100%;
+}
+
+
+
+.search-results{
+  margin-top: 5%;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.search-results>span{
+display: block;
+padding-top: 1.5%;
+}
+.search-result-count{
+  font-size: 0.7em;
+}
+
+.search-result-block {
+
+  margin: auto;
+  display: flex;
+  justify-content: flex-start; /* Align items to start */
+  background-color: rgb(255, 255, 223);
+  width: 90%;
+  border-radius: 45px;
+  padding: 3%;
+}
+
+.book-img {
+  width: 100px; /* Adjust width as needed */
+  height: 150px; /* Adjust height as needed */
+  margin-right: 20px; /* Space between image and text */
+}
+
+.book-details {
+
+  display: flex;
+  flex-direction: column; /* Align items in column */
+}
+
+.book-name {
+  margin-top: 0; /* Remove default margin */
+  text-decoration: underline;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.book-publisher, .published-date {
+  margin-left: 1%;
+  margin-top: 1%; /* Adjust spacing between lines */
+}
+
+.book-description-title{
+  font-size: 1.5em;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.login-box{
+  margin-top: 5%;
+  text-align: center;
+  padding:8%;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(255, 255, 223);
+  border-radius: 2%;
+  font-size: 3em;
+  font-weight: bolder;
+}
+
+.username-field{
+  margin-bottom: 2%;
+}
+.password-field{
+  margin-bottom: 2%;
+}
+
+.btn-login-page{
+  background-color: brown;
+  color: white;
+}
+
+.btn-login-page:active{
+  background-color: rgb(81, 21, 21) !important;
+  color: white !important;
+}
+
+
+.signup-span{
+  font-size: 0.5em;
+}
+
+/* Style the alert box */
+.alert-success {
+  background-color: #d4edda; /* Light green background */
+  border-color: #005d38;     /* Slightly darker green border */
+  color: #005414;            /* Dark green text color */
+  padding: 1rem;           
+  width: 50%;
+  margin: auto;
+  margin-top: 2%;
+  border-radius: 0.5rem;     /* Rounded corners */
+}
+
+/* Style the SVG icon */
+.alert .bi {
+  fill: #28a745;             /* Green color fill for the SVG */
+  width: 20px;               /* Width of the SVG icon */
+  height: 20px;              /* Height of the SVG icon */
+}
+
+/* Adjust spacing next to the icon */
+.alert .me-2 {
+  margin-right: 10px;        /* Increase right margin next to the icon */
+}
+
+/* Ensure SVG does not shrink */
+.alert .flex-shrink-0 {
+  flex-shrink: 0;
+}
+/* Profile Page */
+
+
+
+.user-detail-labels{
+  font-size: 0.5em;
+  display: block;
+  text-align: left;
+  margin-top: 3%;
+  padding: 3%;
+  border-bottom: 2px solid #2c2c2c;;
+
+}
+
+.book-results-banner {
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
+  background-color: rgb(255, 255, 223);
+  padding: 5%;
+  border-radius: 40px;
+  position: relative;
+}
+
+.book-details-box {
+  position: relative;
+}
+
+.action-buttons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#recommendBtn {
+  background-color: brown;
+  margin-bottom: 10px;
+}
+
+#recommendBtn:hover {
+  background-color: rgb(81, 21, 21);
+}
+
+.like-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.heart {
+  width: 5rem;
+  height: 5rem;
+  background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+}
+
+.heart.is-active {
+  transition-duration: 1s;
+  background-position: -2800px 0;
+}
+
+.like-count {
+  margin-top: 0.5rem;
+}
+
+#bookmarkBtn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#bookmarkBtn:hover {
+  transform: scale(1.1);
+}
+
+#bookmarkBtn i {
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+#bookmarkBtn.active i {
+  color: #ff0707;
+}
+
+@keyframes bookmarkPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.bookmark-pop {
+  animation: bookmarkPop 0.3s ease;
+}
+
+.book-title-head {
+  font-size: 3em;
+}
+
+.book-desc-head {
+  display: block;
+  margin-top: 2%;
+  font-size: 2em;
+}
+
+.book-author {
+  display: block;
+}
+
+.published-date-head .published-date {
+  display: block;
+}
+
+.comment-separator {
+  margin: 2rem 0;
+  border-top: 2px solid #ccc;
+}
+
+.comments-section {
+  margin-bottom: 2rem;
+}
+
+.comment {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.comment-text {
+  margin-bottom: 0.5rem;
+}
+
+.comment-timestamp {
+  font-size: 0.8rem;
+  color: #6c757d;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+
+.social-tab {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.comment-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#floatingTextarea2 {
+  resize: none;
+  width: 100%;
+  height: 100px;
+}
+
+#commentBtn {
+  align-self: flex-end;
+  background-color: brown;
+}
+
+#commentBtn:hover {
+  background-color: rgb(81, 21, 21);
+}
